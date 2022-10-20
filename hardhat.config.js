@@ -24,7 +24,9 @@ module.exports = {
       chainId: 31337,
     },
   },
-  solidity: "0.8.14",
+  solidity: {
+    compilers: [{ version: "0.8.14" }, { version: "0.6.6" }],
+  },
   etherscan: {
     apiKey: ETHERSCAN_API_KEY,
   },
@@ -35,5 +37,10 @@ module.exports = {
     currency: "USD",
     coinmarketcap: COINMARKETCAP_API_KEY,
     token: "ETH",
+  },
+  namedAccounts: {
+    deployer: {
+      default: 0,
+    },
   },
 };

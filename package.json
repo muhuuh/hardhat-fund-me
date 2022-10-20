@@ -21,6 +21,6 @@
   },
   "dependencies": {
     "dotenv": "^16.0.3",
-    "solhint": "^3.3.7"
+    "solhint": "^3.0.7"
   }
 }
