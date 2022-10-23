@@ -1,6 +1,7 @@
 const { deployments, ethers, getNamedAccounts } = require("hardhat");
 const { assert, expect } = require("chai");
 
+//better way for if loops
 !developmentChains.includes(network.name)
   ? describe.skip
   : describe("FundMe", async function() {
