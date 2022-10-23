@@ -1,4 +1,7 @@
 {
+  "name": "hardhat-fund-me-youtube",
+  "author": "Arani",
+  "version": "1.0.0",
   "devDependencies": {
     "@chainlink/contracts": "^0.5.1",
     "@ethersproject/abi": "^5.4.7",
@@ -23,5 +26,12 @@
     "alchemy-sdk": "^2.2.0",
     "dotenv": "^16.0.3",
     "solhint": "^3.0.7"
+  },
+  "scripts": {
+    "test": "yarn hardhat test",
+    "test:staging": "yarn hardhat test --network goerli",
+    "lint": "yarn solhint 'contracts/*sol'",
+    "lint:fix": "yarn solhint 'contracts/*sol' --fix",
+    "coverage": "yarn hardhat coverage"
   }
 }
