@@ -118,5 +118,13 @@ describe("FundMe", async function() {
         assert.equal(await fundMe.addressToAmountFunded(accounts[i]), 0);
       }
     });
+
+    it("Only owner can withdraw", async function() {
+      const accounts = await ethers.getSigners();
+      const attacker = accounts[1];
+      const attackerConnectedContract = await fundMe.connect(attacker);
+
+      await expect(attackerConnectedContract.withdraw()).to.be.reverted;
+    });
   });
 });
